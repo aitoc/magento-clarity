@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © Aitoc. All rights reserved.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+        <referenceBlock name="head.additional">
+            <block class="Aitoc\MicrosoftClarity\Block\Script"
+                   name="ms_clarity"
+                   as="ms_clarity"
+                   template="Aitoc_MicrosoftClarity::script.phtml"/>
+        </referenceBlock>
+	</body>
+</page>
