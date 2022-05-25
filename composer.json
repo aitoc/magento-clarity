@@ -2,11 +2,10 @@
   "name": "aitoc/module-microsoft-clarity",
   "description": "Module that enables your site to integrate with Microsoft's Clarity, a web analytics/behaviour monitoring platform",
   "require": {
-    "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.0.13|~7.1.0|~7.2.0|~7.3.0|~7.4.0|~8.0.0|~8.1.0",
     "aitoc/core": ">=1.0.8"
   },
   "type": "magento2-module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": [
     "MIT"
   ],
