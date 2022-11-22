@@ -2,7 +2,6 @@
 /**
  * Copyright © Aitoc. All rights reserved.
  */
-declare(strict_types=1);
 ?>
 <?php
 /** @var $block \Aitoc\MicrosoftClarity\Block\Script */
@@ -11,7 +10,7 @@ if ($block->isEnabled()):
     $clarityCode = $block->getClarityTrackingCode();
     ?>
     <!-- BEGIN MICROSOFT CLARITY TRACKING CODE -->
-    <script type="text/javascript">
+    <script>
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=aitoc";
@@ -19,7 +18,7 @@ if ($block->isEnabled()):
             <?php if ($block->isCustomerGroupTagEnabled()): ?>
             c.clarity("set", "customer_group", "<?= $escaper->escapeJs($block->getCustomerGroup()) ?>");
             <?php endif; ?>
-        })(window, document, "clarity", "script", "<?= /* @noEscape */ $clarityCode ?>");
+        })(window, document, "clarity", "script", "<?= $escaper->escapeHtml($clarityCode) ?>");
     </script>
     <!-- END MICROSOFT CLARITY TRACKING CODE -->
 <?php endif; ?>
